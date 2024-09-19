@@ -11,9 +11,21 @@ class ContainerPage extends StatelessWidget {
         backgroundColor: Colors.lightGreenAccent,
         foregroundColor: Colors.black,
       ),
-      body: Column(
+      body: Stack(
         children: [
-          Image.asset('assets/img/travel.jpg', height: 300, width: double.infinity, fit: BoxFit.cover,)
+          Container(
+            child: Image.asset('assets/img/travel.jpg', height: double.infinity, width: double.infinity, fit: BoxFit.cover,),
+          ),
+          Center(
+            child: Container(
+              height: 80,
+              width: double.infinity,
+              color: Colors.black45,
+            ),
+          ),
+          Center(
+            child: Text("Travel App", style: TextStyle(fontSize: 35, color: Colors.white),),
+          )
         ],
       ),
     );

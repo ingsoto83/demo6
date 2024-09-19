@@ -47,9 +47,43 @@ class FirstPage extends StatelessWidget {
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
-              ElevatedButton(onPressed: (){}, child: Text("GUARDAR"),),
-              ElevatedButton(onPressed: (){}, child: Text("MODIFICAR"),),
-              ElevatedButton(onPressed: (){}, child: Text("ELIMINAR"),),
+              ElevatedButton(onPressed: (){}, child: Column(
+                children: [
+                  Icon(Icons.save),
+                  Text("SAVE"),
+                ],
+              ),),
+              ElevatedButton(onPressed: (){}, child: Column(
+                children: [
+                  Icon(Icons.edit),
+                  Text("EDIT"),
+                ],
+              ),),
+              ElevatedButton(onPressed: (){}, child: Column(
+                children: [
+                  Icon(Icons.delete),
+                  Text("DELETE"),
+                ],
+              ),),
+            ],
+          ),
+          Stack(
+            children: [
+              Container(
+                height: 200,
+                width: 200,
+                color: Colors.purple,
+              ),
+              Container(
+                height: 150,
+                width: 150,
+                color: Colors.greenAccent,
+              ),
+              Container(
+                height: 100,
+                width: 100,
+                color: Colors.cyan,
+              ),
             ],
           )
         ],
